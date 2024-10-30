@@ -1,17 +1,22 @@
 {
-  "name": "@potatocloud/quill-delta-to-markdown",
+  "name": "quill-delta-to-markdown-ts",
   "version": "0.1.0",
-  "description": "Convert from Quill delta to Markdown",
+  "description": "Convert from Quill delta to Markdown for typescript",
   "main": "lib/index.js",
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PotatoCloud/quill-delta-to-markdown.git"
+    "url": "git+https://github.com/PotatoCloud/quill-delta-to-markdown.git"
   },
   "author": "PotatoCloud",
   "license": "GPL-3.0",
-  "keywords": ["quill", "delta", "markdown", "converter"],
+  "keywords": [
+    "quill",
+    "delta",
+    "markdown",
+    "converter"
+  ],
   "scripts": {
     "build": "tsc",
     "test": "jest",

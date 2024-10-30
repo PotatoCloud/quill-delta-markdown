@@ -16,7 +16,7 @@
     "paths": {},
 
     // Source Map
-    "sourceMap": true,
+    "sourceMap": false,
     "sourceRoot": "/",
 
     // Strict Checks
