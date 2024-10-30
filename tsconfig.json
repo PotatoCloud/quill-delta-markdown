@@ -36,8 +36,8 @@
     "declarationMap": true,
     "declarationDir": "./lib"
   },
-  "include": ["./**/*.ts"],
+  "include": ["src/**/*.ts"],
   "exclude": [
-    "node_modules/**/*"
+    "lib", "node_modules/**/*"
   ]
 }
