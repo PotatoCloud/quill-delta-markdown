@@ -1,0 +1,46 @@
+name: Publish Package to NPM
+on:
+  release:
+    types: [created]
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run tests
+        run: yarn test
+
+      - name: Build
+        run: yarn build
+
+      - name: Check lib directory
+        run: |
+          if [ ! -d "lib" ]; then
+            echo "lib directory not found!"
+            exit 1
+          fi
+          if [ ! -f "lib/index.js" ]; then
+            echo "lib/index.js not found!"
+            exit 1
+          fi
+          if [ ! -f "lib/index.d.ts" ]; then
+            echo "lib/index.d.ts not found!"
+            exit 1
+          fi
+
+      - name: Publish to NPM
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
