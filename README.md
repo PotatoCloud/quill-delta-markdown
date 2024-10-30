@@ -5,16 +5,16 @@ text editor to Markdown.
 ## Install
 
 ```shell
-npm i @potatocloud/quill-delta-to-markdown
+npm i quill-delta-to-markdown-ts
 
-yarn add @potatocloud/quill-delta-to-markdown
+yarn add quill-delta-to-markdown-ts
 
-pnpm add @potatocloud/quill-delta-to-markdown
+pnpm add quill-delta-to-markdown-ts
 ```
 ## Usage
 
 ```typescript
-import toMarkdown from 'quill-delta-to-markdown'
+import toMarkdown from 'quill-delta-to-markdown-ts'
 
 const markdown = toMarkdown(deltaFromElseWhere)
 ```
