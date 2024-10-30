@@ -17,7 +17,6 @@
 
     // Source Map
     "sourceMap": false,
-    "sourceRoot": "/",
 
     // Strict Checks
     "alwaysStrict": true,
