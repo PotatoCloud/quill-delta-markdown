@@ -7,7 +7,7 @@
   "types": "lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PotatoCloud/quill-delta-to-markdown.git"
+    "url": "git+https://github.com/PotatoCloud/quill-delta-markdown.git"
   },
   "author": "PotatoCloud",
   "license": "GPL-3.0",
